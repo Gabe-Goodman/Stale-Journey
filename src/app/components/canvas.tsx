@@ -6,7 +6,7 @@ const Canvas = () => {
 	const canvasContainerRef = useRef<HTMLDivElement | null>(null);
 	const audioRef = useRef<HTMLAudioElement | null>(null);
 	const [currentLyric, setCurrentLyric] = useState<string>(
-		"Click to play/pause audio."
+		"Click to play/pause audio.\nScroll to browse images."
 	);
 	const [isPlaying, setIsPlaying] = useState(false);
 
@@ -172,6 +172,7 @@ const Canvas = () => {
 					text-align: center;
 					animation: fadeIn 0.5s ease-in-out;
 					z-index: 5; /* Ensures it appears above other elements */
+					white-space: pre-line; /* Preserves newlines as line breaks */
 				}
 			`}</style>
 		</>
